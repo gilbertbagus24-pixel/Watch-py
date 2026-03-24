@@ -56,12 +56,12 @@ def draw_hands():
     canvas.create_line(center_x, center_y, sec_x, sec_y, fill=sec_color, width=2, tags="hands")
     
     min_x = center_x + (radius - 40) * math.sin(min_angle)
-    min_y = center_y + (radius - 40) * math.cos(min_angle)
-    canvas.create_line(center_x, center_y, sec_x, sec_y, fill=min_color, width=4, tags="hands")
+    min_y = center_y - (radius - 40) * math.cos(min_angle)
+    canvas.create_line(center_x, center_y, min_x, min_y, fill=min_color, width=4, tags="hands")
 
     hour_x = center_x + (radius - 70) * math.sin(hour_angle)
-    hour_y = center_y + (radius - 70) * math.cos(hour_angle)
-    canvas.create_line(center_x, center_y, sec_x, sec_y, fill=hour_color, width=6, tags="hands")
+    hour_y = center_y - (radius - 70) * math.cos(hour_angle)
+    canvas.create_line(center_x, center_y, hour_x, hour_y, fill=hour_color, width=6, tags="hands")
 
 
     canvas.create_oval(center_x-5, center_x+5, center_y+5, center_y-5, fill=clock_color, tags="hands")
