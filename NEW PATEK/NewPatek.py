@@ -1,12 +1,13 @@
 import tkinter as tk
 import math
 import time
+import os
 
 width = 400
 height = 400
 center_x = width // 2
 center_y = height // 2
-radius = 90
+radius = 100
 
 bg_color = "#646464"
 clock_color = "#e5e7eb"
@@ -41,7 +42,10 @@ def draw_clock_face():
 
 from PIL import Image, ImageTk
 
-img = Image.open("Patek.png")
+BASE_DIR = os.path.dirname(__file__)
+img_path = os.path.join(BASE_DIR, "Patek.png")
+
+img = Image.open(img_path)
 img = img.resize((400, 400))
 bg_img = ImageTk.PhotoImage(img)
 
