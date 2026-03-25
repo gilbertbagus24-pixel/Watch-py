@@ -15,7 +15,7 @@ min_color = "#343434"
 sec_color = "#4584b6"
 
 root = tk.Tk()
-root.title("WatchWatch")
+root.title("New Patek")
 canvas = tk.Canvas(root, width=width, height=height, bg=bg_color)
 canvas.pack()
 
